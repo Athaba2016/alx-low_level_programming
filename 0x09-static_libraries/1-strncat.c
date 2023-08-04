@@ -1,22 +1,31 @@
 #include "main.h"
 /**
- *_memcpy - a function that copies memory area
- *@dest: memory where is stored
- *@src: memory where is copied
- *@n: number of bytes
+ * _strncat - concatenate two strings
+ * using at most n bytes from src
+ * @dest: input value
+ * @src: input value
+ * @n: input value
  *
- *Return: copied memory with n byted changed
+ * Return: dest
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	int r = 0;
-	int i = n;
+	int i;
+	int j;
 
 
-	for (; r < i; r++)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[r] = src[r];
-		n--;
+		i++;
 	}
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+	dest[i] = src[j];
+	i++;
+	j++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
