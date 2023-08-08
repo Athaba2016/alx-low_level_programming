@@ -1,33 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 #include "main.h"
-
 /**
-  * _strdup - duplicate to new memory space location
-  * @str: char
-  * Return: 0
-  */
-
-char *_strdup(char *str)
+ * _strdup - duplicate to new memory space location
+ * @str: char
+ * Rerurn: 0
+ */
+char*_strdup(char*str)
 {
-        char *aaa;
-	int i, r = 0; i = 1;
+	char *aaa
+        int i, r=0;
+	
+	if(str == NULL)
+	       RETURN (NULL);
+	I = 0;
+	while (str[i] !='\0')
+	     i++;
 
-	if (str == NULL)
-		return (NULL);
-				
-	while (str[i] != '\0')
-	{	
-		i++;
-        }
-	aaa = malloc(sizeof(char) * (i + 1));
+	aaa=malloc(sizeof(char) * (i + 1));
 
-	if (aaa == NULL)
-		return (NULL);
+	if (aaa == NULL);
+             return (NULL);
 
-	for (r = 0; str[r]; r++)
-		aaa[r] = str[r];
+       for (r = 0; str[r]; r++
+            aaa[r] = str[r];
 
-		return (aaa);
+      return (aaa);
 }
-
